@@ -11,20 +11,33 @@
   </head>
 
   <body>
-  <ul>
-  <li>
-  <a href="/movies">Movies</a>
-  </li>
-  <li>
-  <a href="/dirctors">Dirctors</a>
-  </li>
-  <li>
-  <a href="/actors">Actors</a>
-  </li>
-  <li>
-  <a href="/characters">Characters</a>
-  </li>
-  </ul>
+    <ul>
+      <li>
+        <a href="/movies">Movies</a>
+      </li>
+      <li>
+        <a href="/dirctors">Dirctors</a>
+      </li>
+      <li>
+        <a href="/actors">Actors</a>
+      </li>
+      <li>
+        <a href="/characters">Characters</a>
+      </li>
+    </ul>
+
+    <% if notice.present? %>
+      <div style="color: green">
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert.present? %>
+      <div style="color: red">
+        <%= alert %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
